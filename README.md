@@ -1,6 +1,10 @@
-### Amazing Homepage Design Translated to a Web Page - Eventia
+## Amazing Homepage Design Translated to a Web Page - Eventia
 
-## Local Setup
+### Deployment
+
+Open [Here](https://amazing-homepage.herokuapp.com/) to view the deployed application
+
+### Local Setup
 
 1. Clone repo and cd into it
 2. Install dependencies with ```npm install```
@@ -8,12 +12,12 @@
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## Technologies
+### Technologies
 
 1. React
 2. CSS Grid and Flexbox
 3. JavaScript
 
-## Credits
+### Credits
 
 This is a project in response to a challenge by ```Roamtech Solutions```
