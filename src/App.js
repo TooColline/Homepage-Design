@@ -1,10 +1,11 @@
 import React from "react";
 import "./App.css";
+import MainComponent from './components/Main/MainComponent';
 
 function App() {
   return (
     <div className="App">
-      <h2>Work in Progres</h2>
+      <MainComponent />
     </div>
   );
 }

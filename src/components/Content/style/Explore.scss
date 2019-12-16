@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Muli&display=swap");
+$tablet: 1145px;
+$mobile: 768px;
+
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+body {
+  overflow-x: hidden;
+}
+.explore {
+  display: flex;
+  padding: 100px 0;
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+  }
+  .explore-caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 3rem 5rem;
+    @include tablet {
+      text-align: center;
+      align-items: center;
+    }
+    .heading-3 {
+      text-transform: uppercase;
+      font-size: 28px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 800;
+      @include mobile {
+        font-size: 20px;
+      }
+      .h3-span {
+        color: #ff512f;
+      }
+    }
+    .explore-text {
+      margin: 30px 0;
+      font-size: 12px;
+      color: #696969;
+      font-family: "Muli", sans-serif;
+    }
+    .btn {
+      color: #ff512f;
+      font-family: "Open Sans", sans-serif;
+      font-size: 15px;
+      display: flex;
+      border: none;
+
+      .border-fa {
+        height: 25px;
+        width: 25px;
+        border: 1px solid #ff512f;
+        border-radius: 50%;
+        padding: 5px;
+        font-size: 14px;
+        margin-left: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+  .testimonials-container {
+    @include tablet {
+      justify-content: center;
+      align-items: center;
+    }
+    display: flex;
+    .design-wrapper {
+      .lower-div,
+      .upper-div {
+        height: 350px;
+      }
+      .lower-div {
+        margin-right: 20px;
+        width: 600px;
+      }
+
+      .upper-div {
+        width: 700px;
+      }
+
+      .lower-div {
+        position: relative;
+        border: 1px solid rgb(37, 44, 58);
+      }
+
+      .upper-div {
+        background-color: rgb(37, 44, 58);
+        position: absolute;
+        top: 25px;
+        left: 25px;
+      }
+    }
+  }
+}

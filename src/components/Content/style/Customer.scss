@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+$tablet: 1145px;
+$mobile: 768px;
+
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+.customer-container {
+  display: grid;
+  grid-row-gap: 3rem;
+  justify-items: center;
+  background-color: #1c1c1c;
+  color: #ffffff;
+  padding: 6rem 0 10rem 0;
+  text-align: center;
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+.customer-container-heading {
+  font-family: "Open Sans", sans-serif;
+  font-size: 38px;
+  font-weight: 300;
+  @include tablet {
+    font-size: 32px;
+  }
+  @include mobile {
+    font-size: 25px;
+  }
+}
+.customer-container-text {
+  font-family: "Muli", sans-serif;
+  font-size: 13px;
+  width: 43%;
+  text-align: center;
+  @include tablet {
+    text-align: center;
+    width: auto;
+  }
+}
+.customer-container-button {
+  .btn {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    font-family: "Muli", sans-serif;
+    font-size: 10px;
+    @include tablet {
+      text-align: center;
+      justify-content: center;
+      background-image: linear-gradient(to right, #f71111, #ff731c);
+      width: 150px;
+      height: 50px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+  }
+  .btn--transparent {
+    color: #ffffff;
+    margin-top: 1rem;
+    position: relative;
+    transition: all 0.2s;
+    @include tablet {
+      color: #ffffff;
+    }
+  }
+  .btn--transparent::before {
+    content: "";
+    width: 205%;
+    height: 350%;
+    position: absolute;
+    top: -1.3rem;
+    left: -3.1rem;
+    border: 1px solid #fff;
+    padding: 1rem;
+    transition: all 0.2s;
+    @include tablet {
+      display: none;
+    }
+  }
+  .btn--transparent::after {
+    content: "";
+    width: 205%;
+    height: 350%;
+    position: absolute;
+    top: -0.9rem;
+    left: -2.7rem;
+    border: 1px solid #fff;
+    padding: 1rem;
+    transition: all 0.2s;
+    @include tablet {
+      display: none;
+    }
+  }
+  .btn--transparent:hover:after,
+  .btn--transparent:focus:after {
+    top: -1.3rem;
+    left: -3.1rem;
+  }
+  .btn--transparent:hover:before,
+  .btn--transparent:focus:before {
+    top: -0.9rem;
+    left: -2.7rem;
+  }
+  .btn:focus {
+    outline: none;
+  }
+}

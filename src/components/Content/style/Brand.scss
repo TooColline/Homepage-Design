@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Muli&display=swap");
+
+$tablet: 1145px;
+
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+.brand-container {
+  height: 100vh;
+  width: 100vw;
+  background: url("../../../assets/images/HeaderBg.jpg");
+  display: flex;
+
+  @include tablet {
+    flex-direction: column;
+    height: auto;
+    margin: auto;
+  }
+
+  .text-container {
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    @include tablet {
+      justify-content: center;
+      flex-basis: unset;
+      padding: 80px 0;
+    }
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 460px;
+      height: 203px;
+      .text-row-1 {
+        font-family: "Open Sans", sans-serif;
+        font-size: 1.625em;
+        color: #ffffff;
+        font-weight: 400;
+        @include tablet {
+          text-align: center;
+          font-size: 25px;
+        }
+      }
+      .text-row-2 {
+        font-size: 100px;
+        color: #ffffff;
+        font-weight: 800;
+        letter-spacing: 4px;
+        @include tablet {
+          text-align: center;
+          font-size: 80px;
+        }
+      }
+      .text-row-3 {
+        font-size: 60px;
+        color: #ffffff;
+        font-weight: 800;
+        letter-spacing: 2px;
+        @include tablet {
+          text-align: center;
+          font-size: 40px;
+        }
+      }
+      .text-row-4 {
+        font-family: "Muli", sans-serif;
+        font-size: 15px;
+        color: #ffffff;
+        @include tablet {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .brand-calendar {
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .calendar-container {
+      .calendar {
+        height: 600px;
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        .brand-calendar-columns:nth-child(1) {
+          box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+          background-color: #444444;
+          flex-grow: 3;
+        }
+        .brand-calendar-columns:nth-child(2) {
+          background-color: #2b2b2b;
+          opacity: 0.8;
+          flex-grow: 37;
+          color: #ffffff;
+          display: flex;
+          flex-direction: column;
+          .timer {
+            display: flex;
+            width: 100%;
+            justify-content: space-evenly;
+            align-items: center;
+            font-family: "Montserrat", sans-serif;
+            flex-grow: 2;
+            .time-value {
+              display: flex;
+              flex-direction: column;
+              text-align: center;
+              span:nth-child(1) {
+                font-weight: 900;
+                font-size: 40px;
+              }
+              span:nth-child(2) {
+                font-weight: 900;
+                font-size: 12px;
+              }
+            }
+          }
+          .date {
+            font-family: "Open Sans", sans-serif;
+            flex-grow: 1;
+            font-size: 21px;
+            font-weight: 800;
+            text-align: center;
+          }
+        }
+        .brand-calendar-columns:nth-child(3) {
+          background-color: #2d2d2d;
+          flex-grow: 28;
+        }
+        .brand-calendar-columns:nth-child(4) {
+          background-image: linear-gradient(to right, #f71111, #ff731c);
+          flex-grow: 35;
+          .sponsor-icon {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .sponsor-title {
+              text-transform: uppercase;
+              color: #ffffff;
+              font-family: "Montserrat", sans-serif;
+              font-weight: 800;
+              font-size: 20px;
+            }
+          }
+        }
+        .brand-calendar-columns:nth-child(5) {
+          background-color: #ffffff;
+          align-items: center;
+          justify-content: center;
+          flex-grow: 0.5;
+          @include tablet {
+            background-image: linear-gradient(to right, #f71111, #ff731c);
+            color: white;
+          }
+          .location {
+            font-family: "Muli", sans-serif;
+            font-size: 14px;
+            font-weight: 200;
+            text-align: center;
+            padding: 12px;
+          }
+        }
+      }
+    }
+  }
+}
