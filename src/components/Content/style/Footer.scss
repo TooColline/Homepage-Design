@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
+$mobile: 768px;
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
 .footer {
   grid-column: full-start / full-end;
   background-color: #313131;
@@ -33,12 +40,21 @@
   }
 }
 .copyright {
-  grid-column: full-start / full-end;
-  display: grid;
+  display: flex;
   background-color: #2d2d2d;
   justify-content: center;
   padding: 0.9rem;
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
-  color: #6B6B6B;
+  color: #6b6b6b;
+  .arrow-up {
+    position: absolute;
+    right: 0;
+    padding-right: 250px;
+    cursor: pointer;
+    @include mobile {
+      right: 0;
+      padding-right: 30px;
+    }
+  }
 }

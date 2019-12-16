@@ -3,7 +3,7 @@ import "./style/Sponsors.scss";
 
 const Sponsors = () => {
   return (
-    <div className="sponsors-container">
+    <div id="partners" className="sponsors-container">
       <h2 className="sponsors-title">Current &#38; Past Sponsors</h2>
       <div className="sponsors-images">
         <img

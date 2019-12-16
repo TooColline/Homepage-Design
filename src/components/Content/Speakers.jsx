@@ -5,7 +5,7 @@ import DecoRight from "../../assets/SvgComponents/DecoRight";
 
 const Speakers = () => {
   return (
-    <div className="speakers">
+    <div id="speakers" className="speakers">
       <div className="deco-left">
         <DecoLeft />
       </div>
@@ -43,6 +43,7 @@ const Speakers = () => {
               <span className="speakers-name">David Martin</span>
               <span className="speakers-title">Founder</span>
             </div>
+            <div className="action-button">+</div>
           </div>
           <div className="speaker-person">
             <div className="img-container">
@@ -74,6 +75,7 @@ const Speakers = () => {
               <span className="speakers-name">Reena Scot</span>
               <span className="speakers-title">Founder</span>
             </div>
+            <div className="action-button">+</div>
           </div>
           <div className="speaker-person">
             <div className="img-container">
@@ -105,6 +107,7 @@ const Speakers = () => {
               <span className="speakers-name">Paul Smith</span>
               <span className="speakers-title">Founder</span>
             </div>
+            <div className="action-button">+</div>
           </div>
           <div className="speaker-person">
             <div className="img-container">
@@ -136,6 +139,7 @@ const Speakers = () => {
               <span className="speakers-name">Jenefir White</span>
               <span className="speakers-title">Founder</span>
             </div>
+            <div className="action-button">+</div>
           </div>
           <div className="speaker-person">
             <div className="img-container">
@@ -167,6 +171,7 @@ const Speakers = () => {
               <span className="speakers-name">David Martin</span>
               <span className="speakers-title">Founder</span>
             </div>
+            <div className="action-button">+</div>
           </div>
           <div className="speaker-person">
             <div className="img-container">
@@ -198,6 +203,7 @@ const Speakers = () => {
               <span className="speakers-name">Reena Scot</span>
               <span className="speakers-title">Founder</span>
             </div>
+            <div className="action-button">+</div>
           </div>
           <div className="speaker-person">
             <div className="img-container">
@@ -229,6 +235,7 @@ const Speakers = () => {
               <span className="speakers-name">Paul Smith</span>
               <span className="speakers-title">Founder</span>
             </div>
+            <div className="action-button">+</div>
           </div>
           <div className="speaker-person">
             <div className="img-container">
@@ -260,6 +267,7 @@ const Speakers = () => {
               <span className="speakers-name">Jenefir White</span>
               <span className="speakers-title">Founder</span>
             </div>
+            <div className="action-button">+</div>
           </div>
         </div>
       </div>

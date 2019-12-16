@@ -3,7 +3,7 @@ import "./style/Explore.scss";
 
 const Explore = () => {
   return (
-    <div className="explore">
+    <div id="explore" className="explore">
       <div className="explore-caption">
         <h3 className="heading-3">
           To explore Business Event get ready with more than{" "}

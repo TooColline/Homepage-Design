@@ -40,15 +40,42 @@ const Brand = () => {
                 </div>
               </div>
               <div className="date">
-                <img
-                  src={require("../../assets/images/Timer.png")}
-                  alt="Timer"
-                />
-                DECEMBER 18-21, 2016 IN KENYA
+                <div>
+                  <img
+                    src={require("../../assets/images/Timer.png")}
+                    alt="Timer"
+                  />
+                </div>
+                <div>DECEMBER 18-21, 2016 IN KENYA</div>
               </div>
             </div>
 
-            <div className="brand-calendar-columns"></div>
+            <div className="brand-calendar-columns">
+              <div className="people">
+                <div className="people-icon">
+                  <img
+                    src={require("../../assets/images/Person.png")}
+                    alt="People"
+                  />
+                </div>
+                <div className="people-values">
+                  <h4>SEATS</h4>
+                  <p>300 People</p>
+                </div>
+              </div>
+              <div className="speaker">
+                <div className="speaker-icon">
+                  <img
+                    src={require("../../assets/images/SpeakerIcon.png")}
+                    alt="Speaker"
+                  />
+                </div>
+                <div className="speaker-values">
+                  <h4>SPEAKERS</h4>
+                  <p>16 Professional</p>
+                </div>
+              </div>
+            </div>
             <div className="brand-calendar-columns">
               <div className="sponsor-icon">
                 <span className="sponsor-title">Title Sponsor</span>
@@ -60,7 +87,15 @@ const Brand = () => {
             </div>
             <div className="brand-calendar-columns">
               <div className="location">
-                EA South West Veally, Canada, 123456
+                <div className="location-icon">
+                  <img height="25px"
+                    src={require("../../assets/images/LocationIcon.png")}
+                    alt="Location"
+                  />
+                </div>
+                <div className="location-value">
+                  <p>EA South West Veally, Canada, 123456</p>
+                </div>
               </div>
             </div>
           </div>
