@@ -3,9 +3,17 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat|Muli&display=swap");
 
 $tablet: 1145px;
+$mobile-min: 768px;
+$mobile-max: 768px;
 
 @mixin tablet {
   @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (min-width: #{$mobile-min}) and (max-width: #{$mobile-max}) {
     @content;
   }
 }
@@ -19,6 +27,12 @@ $tablet: 1145px;
   @include tablet {
     flex-direction: column;
     height: auto;
+    margin: auto;
+  }
+  @include mobile {
+    flex-direction: column;
+    height: auto;
+    width: 80vw;
     margin: auto;
   }
 
@@ -152,7 +166,8 @@ $tablet: 1145px;
             font-family: "Muli", sans-serif;
             font-size: 13px;
           }
-          .speaker-icon, .people-icon {
+          .speaker-icon,
+          .people-icon {
             height: 56px;
             width: 56px;
             padding-top: 6px;
@@ -160,16 +175,16 @@ $tablet: 1145px;
             border-radius: 50%;
             background-color: #444444;
           }
-          .people-values, .speaker-values {
+          .people-values,
+          .speaker-values {
             padding-left: 10px;
           }
           .people {
-
             display: flex;
             flex-grow: 1;
             align-items: center;
             justify-content: center;
-            color: #FFFFFF;
+            color: #ffffff;
           }
           .speaker {
             border-style: none none none dashed;
@@ -179,7 +194,7 @@ $tablet: 1145px;
             flex-grow: 1;
             align-items: center;
             justify-content: center;
-            color: #FFFFFF;
+            color: #ffffff;
           }
         }
         .brand-calendar-columns:nth-child(4) {
