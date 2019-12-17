@@ -20,7 +20,7 @@ const Footer = () => {
       <div className="copyright">
         <span className="footer-copyright">&copy; THEMEXPERT</span>
         <div onClick={() => window.location.href = "#root"} className="arrow-up">
-          <i class="fa fa-arrow-up" aria-hidden="true"></i>
+          <i className="fa fa-arrow-up" aria-hidden="true"></i>
         </div>
       </div>
     </div>
